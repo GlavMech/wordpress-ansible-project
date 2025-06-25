@@ -1,0 +1,17 @@
+---
+- name: Install WordPress stack
+  hosts: wordpress
+  become: yes
+
+  vars:
+    wordpress_db_name: wp_db
+    wordpress_db_user: wp_user
+    wordpress_db_password: wp_pass
+    mysql_root_password: rootpassword123
+
+  roles:
+    - apache
+    - mariadb
+    - php
+    - wordpress
+
