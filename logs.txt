@@ -1,0 +1,51 @@
+
+PLAY [Install WordPress stack] *************************************************
+
+TASK [Gathering Facts] *********************************************************
+ok: [192.168.56.10]
+
+TASK [apache : Install Apache] *************************************************
+ok: [192.168.56.10]
+
+TASK [apache : Ensure Apache is running] ***************************************
+ok: [192.168.56.10]
+
+TASK [mariadb : Install MariaDB Server] ****************************************
+ok: [192.168.56.10]
+
+TASK [mariadb : Ensure MariaDB is running] *************************************
+ok: [192.168.56.10]
+
+TASK [mariadb : Install Python MySQL client library] ***************************
+ok: [192.168.56.10]
+
+TASK [mariadb : Check if root password is already set] *************************
+changed: [192.168.56.10]
+
+TASK [mariadb : Set root password and allow root login with password (only if no password)] ***
+skipping: [192.168.56.10]
+
+TASK [mariadb : Create WordPress Database] *************************************
+ok: [192.168.56.10]
+
+TASK [mariadb : Create WordPress User] *****************************************
+ok: [192.168.56.10]
+
+TASK [php : Install PHP and modules] *******************************************
+ok: [192.168.56.10]
+
+TASK [wordpress : Download WordPress] ******************************************
+ok: [192.168.56.10]
+
+TASK [wordpress : Extract WordPress] *******************************************
+changed: [192.168.56.10]
+
+TASK [wordpress : Set permissions] *********************************************
+changed: [192.168.56.10]
+
+TASK [wordpress : Configure wp-config.php] *************************************
+ok: [192.168.56.10]
+
+PLAY RECAP *********************************************************************
+192.168.56.10              : ok=14   changed=3    unreachable=0    failed=0    skipped=1    rescued=0    ignored=0   
+
